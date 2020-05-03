@@ -1,0 +1,10 @@
+server:
+  port: 8081
+  tomcat:
+    max-threads: 10000
+  servlet:
+    application-display-name: 'Pipa Score Points'
+
+spring:
+  application:
+    name: 'Pipa Score Points'
