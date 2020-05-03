@@ -1,4 +1,4 @@
-package br.com.pipa.score.service.dto;
+package br.com.pipa.score.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

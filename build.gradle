@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+ext {
+    springBootVersion = '2.1.9.RELEASE'
+    springFoxVersion = '2.9.2'
+    lombokVersion = '1.18.8'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion) {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+    testCompile group: 'org.springframework', name: 'spring-test', version: '5.2.6.RELEASE'
+
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion){
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: springBootVersion)
+
+    compile(group: 'io.springfox', name: 'springfox-swagger2', version: springFoxVersion)
+    compile(group: 'io.springfox', name: 'springfox-swagger-ui', version: springFoxVersion)
+
+    compile(group: 'org.projectlombok', name: 'lombok', version: lombokVersion)
+
+    compileOnly(group: 'org.projectlombok', name: 'lombok', version: lombokVersion)
+    annotationProcessor(group: 'org.projectlombok', name: 'lombok', version: lombokVersion)
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}

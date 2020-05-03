@@ -1,22 +1,24 @@
-package br.com.pipa.score.service.dto;
+package br.com.pipa.score.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class UserPositionDTO implements Comparable<UserPositionDTO>{
+public class ScorePointsDTO implements Comparable<ScorePointsDTO>{
 
     private Integer userId = 0;
 
     private Integer scorePoints = 0;
 
-    private Integer position = 0;
-
     @Override
-    public int compareTo(UserPositionDTO o) {
+    public int compareTo(ScorePointsDTO o) {
         if(this.getScorePoints() > o.getScorePoints()) {
             return 1;
         }

@@ -1,4 +1,4 @@
-package br.com.pipa.score.service.setup;
+package br.com.pipa.score.setup;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

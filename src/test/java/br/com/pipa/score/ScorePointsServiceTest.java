@@ -1,7 +1,7 @@
-package br.com.pipa.score.service;
+package br.com.pipa.score;
 
-import br.com.pipa.score.service.dto.ScorePointsDTO;
-import br.com.pipa.score.service.service.ScorePointsService;
+import br.com.pipa.score.service.ScorePointsService;
+import br.com.pipa.score.dto.ScorePointsDTO;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

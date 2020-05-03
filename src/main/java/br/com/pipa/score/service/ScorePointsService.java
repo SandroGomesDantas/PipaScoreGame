@@ -1,8 +1,8 @@
-package br.com.pipa.score.service.service;
+package br.com.pipa.score.service;
 
-import br.com.pipa.score.service.dto.HighScoreDTO;
-import br.com.pipa.score.service.dto.ScorePointsDTO;
-import br.com.pipa.score.service.dto.UserPositionDTO;
+import br.com.pipa.score.dto.HighScoreDTO;
+import br.com.pipa.score.dto.ScorePointsDTO;
+import br.com.pipa.score.dto.UserPositionDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.ApplicationScope;
 

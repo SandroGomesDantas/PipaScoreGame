@@ -1,7 +1,7 @@
-package br.com.pipa.score.service.setup;
+package br.com.pipa.score.setup;
 
 import lombok.AllArgsConstructor;
-import br.com.pipa.score.service.utils.PathUtil;
+import br.com.pipa.score.utils.PathUtil;
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.builders.PathSelectors;

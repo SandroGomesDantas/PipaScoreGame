@@ -1,4 +1,4 @@
-package br.com.pipa.score.service.utils;
+package br.com.pipa.score.utils;
 
 import org.springframework.web.util.UriComponentsBuilder;
 import springfox.documentation.spring.web.paths.AbstractPathProvider;
