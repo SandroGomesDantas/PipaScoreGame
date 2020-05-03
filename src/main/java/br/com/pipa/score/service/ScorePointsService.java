@@ -3,13 +3,13 @@ package br.com.pipa.score.service;
 import br.com.pipa.score.dto.HighScoreDTO;
 import br.com.pipa.score.dto.ScorePointsDTO;
 import br.com.pipa.score.dto.UserPositionDTO;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.ApplicationScope;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 @ApplicationScope
 public class ScorePointsService {
 

@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'jacoco'
 }
 
 ext {
@@ -17,10 +16,7 @@ repositories {
 }
 
 dependencies {
-    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion) {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-    }
-    testCompile group: 'org.springframework', name: 'spring-test', version: '5.2.6.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 
     compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion){
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
@@ -34,12 +30,4 @@ dependencies {
 
     compileOnly(group: 'org.projectlombok', name: 'lombok', version: lombokVersion)
     annotationProcessor(group: 'org.projectlombok', name: 'lombok', version: lombokVersion)
-}
-
-jacocoTestReport {
-    reports {
-        xml.enabled false
-        csv.enabled false
-        html.destination file("${buildDir}/jacocoHtml")
-    }
 }

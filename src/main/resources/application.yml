@@ -3,8 +3,8 @@ server:
   tomcat:
     max-threads: 10000
   servlet:
-    application-display-name: 'Pipa Score Points'
+    application-display-name: 'Pipa ScorePointsService Points'
 
 spring:
   application:
-    name: 'Pipa Score Points'
+    name: 'Pipa ScorePointsService Points'

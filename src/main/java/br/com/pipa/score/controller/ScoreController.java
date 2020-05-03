@@ -1,10 +1,10 @@
 package br.com.pipa.score.controller;
 
 import br.com.pipa.score.dto.HighScoreDTO;
+import br.com.pipa.score.dto.ScorePointsDTO;
 import br.com.pipa.score.dto.ScorePointsRequestDTO;
 import br.com.pipa.score.dto.UserPositionDTO;
 import br.com.pipa.score.service.ScorePointsService;
-import br.com.pipa.score.dto.ScorePointsDTO;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
