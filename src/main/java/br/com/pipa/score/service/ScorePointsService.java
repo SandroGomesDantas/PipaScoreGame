@@ -21,13 +21,13 @@ public class ScorePointsService {
 
         try {
             validate(userId, "userID");
-            validate(points, "points");
+            validate(points, "scorePoints");
         } catch (ZeroOrNegativeParamException e) {
             e.printStackTrace();
-            throw new ZeroOrNegativeParamException(e.getMessage());
+            throw new ZeroOrNegativeParamException(e.getMessage(), e.getParamsError());
         } catch (NullParamException e) {
             e.printStackTrace();
-            throw new NullParamException(e.getMessage());
+            throw new NullParamException(e.getMessage(), e.getParamsError());
         }
 
         UserPositionDTO dto = data.getScorePointsByUserId(userId);
@@ -53,10 +53,10 @@ public class ScorePointsService {
             validate(userId, "userID");
         } catch (ZeroOrNegativeParamException e) {
             e.printStackTrace();
-            throw new ZeroOrNegativeParamException(e.getMessage());
+            throw new ZeroOrNegativeParamException(e.getMessage(), e.getParamsError());
         } catch (NullParamException e) {
             e.printStackTrace();
-            throw new NullParamException(e.getMessage());
+            throw new NullParamException(e.getMessage(), e.getParamsError());
         }
 
         UserPositionDTO userPositionDTO = data.getScorePointsByUserId(userId);
@@ -83,11 +83,11 @@ public class ScorePointsService {
     private boolean validate(Integer param, String paramName) throws NullParamException, ZeroOrNegativeParamException {
 
         if(param == null) {
-            throw new NullParamException("parametro_nao_nulo");
+            throw new NullParamException("parametro_nao_nulo", new Object[]{paramName});
         }
 
         if(param <= 0) {
-            throw new ZeroOrNegativeParamException("parametro_positivo");
+            throw new ZeroOrNegativeParamException("parametro_positivo", new Object[]{paramName});
         }
 
         return true;

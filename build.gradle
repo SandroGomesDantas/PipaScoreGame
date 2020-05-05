@@ -7,6 +7,7 @@ ext {
     springBootVersion = '2.1.9.RELEASE'
     springFoxVersion = '2.9.2'
     lombokVersion = '1.18.8'
+    commonsLangVersion  = '2.6'
 }
 
 group 'org.example'
@@ -33,6 +34,8 @@ dependencies {
     compile(group: 'io.springfox', name: 'springfox-swagger-ui', version: springFoxVersion)
 
     compile(group: 'org.projectlombok', name: 'lombok', version: lombokVersion)
+
+    implementation("commons-lang:commons-lang:$commonsLangVersion")
 
     compileOnly(group: 'org.projectlombok', name: 'lombok', version: lombokVersion)
     annotationProcessor(group: 'org.projectlombok', name: 'lombok', version: lombokVersion)

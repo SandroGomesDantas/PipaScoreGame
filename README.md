@@ -40,10 +40,13 @@ Disponibilizar uma API para controle do placar de pontuação de usuários
 
 # Actuator
 O Spring Actuator é uma ferramenta que disponibiliza endpoints para monitoração da saúde do ambiente.
+
 **URL para acesso dos endpoints:** {*baseURL*}/actuator
+
 **Exemplo:** http://localhost:8081/actuator
 
 # JACOCO
 O JACOCO fornece um relatório com informações sobre a cobertura dos testes unitários implementados no projeto.
 O relatório é gerado pelo gradle utilizando a task ***jacocoTestCoverageVerification***, o relatório é gerado em HTML no seguinte caminho {*diretorio-base-projeto*}PipaScoreGame/build/reports/tests/test/index.html
+
 **Exemplo:** file:///home/cin_sdantas/workspace/PipaScoreGame/build/reports/tests/test/index.html
